@@ -59,7 +59,7 @@ function readStock(data){
   foodS=data.val();
   foodObj.updateFoodStock(foodS);
 }
-
+//myproject
 
 //function to update food stock and last fed time
 function feedDog(){
