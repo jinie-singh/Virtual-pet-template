@@ -55,32 +55,10 @@ function draw() {
 }
 
 //function to read food Stock
-function readStock(data){
-  foodS=data.val();
-  foodObj.updateFoodStock(foodS);
-}
+
 //myproject
 
 //function to update food stock and last fed time
-function feedDog(){
-  dog.addImage(happyDog);
-  
-  if(foodObj.getFoodStock()<= 0){
-    foodObj.updateFoodStock(foodObj.getFoodStock()*0);
-  }else{
-    foodObj.updateFoodStock(foodObj.getFoodStock()-1);
-  }
-  
-  database.ref('/').update({
-    Food:foodObj.getFoodStock(),
-    FeedTime:hour()
-  })
-}
+
 
 //function to add food in stock
-function addFoods(){
-  foodS++;
-  database.ref('/').update({
-    Food:foodS
-  })
-}
